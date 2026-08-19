@@ -79,31 +79,46 @@ The Central Library wants to manage book lending and cultural events.
 - Overdue fines apply for late returns.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
 
-### Entities and Attributes
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/18590eff-fee0-447e-84c1-5c0141f3fb1b" />
+
+## Entities and Attributes
 
 | Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+|---|---|---|
+| BOOK | **book_id (PK)**, title, author, isbn, publish_year, available_copies | Stores book details |
+| CATEGORY | **category_id (PK)**, category_name, description | Classifies books |
+| MEMBER | **member_id (PK)**, full_name, email, phone, address, join_date | Library member |
+| LOAN | **loan_id (PK)**, loan_date, due_date, return_date, status | Tracks book loans |
+| LOAN_ITEM | **loan_item_id (PK)**, **book_id (FK)**, quantity | Books included in a loan |
+| FINE | **fine_id (PK)**, fine_date, amount, paid_date, status | Tracks overdue fines |
+| EVENT | **event_id (PK)**, event_name, event_date, description, location | Library events |
+| ROOM | **room_id (PK)**, room_name, capacity, location, room_type | Rooms for events and study |
+| SPEAKER | **speaker_id (PK)**, full_name, bio, contact_info | Event speakers/authors |
 
-### Relationships and Constraints
+## Relationships and Constraints
 
 | Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+|---|---|---|---|
+| BOOK — BELONGS TO — CATEGORY | N : 1 | BOOK total | Each book belongs to one category |
+| MEMBER — BORROWS — LOAN | 1 : N | LOAN total | A member can have multiple loans |
+| LOAN — INCLUDES — LOAN_ITEM | 1 : N | LOAN_ITEM total | A loan can contain multiple books |
+| BOOK — IS OF — LOAN_ITEM | 1 : N | LOAN_ITEM total | A book can appear in multiple loan records |
+| LOAN — GENERATES — FINE | 1 : N | FINE partial | A late loan may generate a fine |
+| MEMBER — REGISTERS FOR — EVENT | M : N | Partial | Members can register for multiple events |
+| EVENT — HAS — SPEAKER | M : N | EVENT total | An event can have one or more speakers |
+| EVENT — BOOKED IN — ROOM | N : 1 | EVENT total | An event uses a room |
 
-### Assumptions
-- 
-- 
-- 
+## Assumptions
+
+- Each book belongs to one category.
+- A member can have multiple loans.
+- A loan can contain multiple books.
+- Late returns may generate fines.
+- Members can register for multiple events.
+- Each event has one or more speakers.
+- A room can be booked for events or study.
+- A speaker can participate in multiple events.
 
 ---
 
@@ -120,39 +135,47 @@ A popular restaurant wants to manage reservations, orders, and billing.
 - Bills generated per reservation, including food and service charges.  
 - Waiters assigned to serve reservations.
 
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+## ER Diagram:
 
-### Entities and Attributes
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/c1f53f7a-a828-443a-80cb-e15d26f6f639" />
+
+
+## Entities and Attributes
 
 | Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+|---|---|---|
+| CUSTOMER | **customer_id (PK)**, full_name, phone, email, address | Stores customer details |
+| RESERVATION | **reservation_id (PK)**, res_date, res_time, party_size, status, **customer_id (FK)**, **table_id (FK)**, **waiter_id (FK)** | Stores table reservations |
+| TABLE | **table_id (PK)**, table_no, capacity, location, status | Restaurant tables |
+| ORDER | **order_id (PK)**, order_date, order_time, status, **reservation_id (FK)** | Food orders linked to reservations |
+| ORDER_ITEM | **order_item_id (PK)**, quantity, unit_price, special_instructions, **order_id (FK)**, **menu_item_id (FK)** | Items included in an order |
+| MENU_ITEM | **menu_item_id (PK)**, item_name, description, unit_price, is_available, **category_id (FK)** | Dishes offered by restaurant |
+| CATEGORY | **category_id (PK)**, category_name, description | Starter, Main, Dessert, etc. |
+| BILL | **bill_id (PK)**, bill_date, subtotal, service_charge, tax, total_amount, **reservation_id (FK)** | Bill generated for a reservation |
+| WAITER | **waiter_id (PK)**, full_name, phone, shift | Waiter assigned to reservations |
 
-### Relationships and Constraints
+## Relationships and Constraints
 
 | Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+|---|---|---|---|
+| CUSTOMER — MAKES — RESERVATION | 1 : N | Reservation total | A customer can make multiple reservations |
+| RESERVATION — RESERVES — TABLE | N : 1 | Reservation total | A reservation is assigned to one table |
+| RESERVATION — PLACES — ORDER | 1 : N | Order total | A reservation can have multiple food orders |
+| ORDER — CONTAINS — ORDER_ITEM | 1 : N | Order_Item total | Each order contains multiple dishes |
+| ORDER_ITEM — REFERS TO — MENU_ITEM | N : 1 | Order_Item total | Each order item refers to one menu item |
+| CATEGORY — HAS — MENU_ITEM | 1 : N | Menu_Item total | A category contains multiple dishes |
+| RESERVATION — GENERATES — BILL | 1 : 1 | Bill total | Each reservation generates one bill |
+| WAITER — SERVES — RESERVATION | 1 : N | Reservation total | A waiter can serve multiple reservations |
 
-### Assumptions
-- 
-- 
-- 
+## Assumptions
 
----
+- Each reservation is assigned to one table.
+- A customer can make multiple reservations.
+- A reservation can have multiple food orders.
+- Each order contains multiple order items.
+- Each menu item belongs to one category.
+- Each reservation generates one bill.
+- A waiter can serve multiple reservations.
+- Walk-in customers are recorded as reservations with a suitable status.
+- Service charge and tax are included in the bill.
 
-## Instructions for Students
-
-1. Complete **all three scenarios** (A, B, C).  
-2. Identify entities, relationships, and attributes for each.  
-3. Draw ER diagrams using **draw.io / diagrams.net** or hand-drawn & scanned.  
-4. Fill in all tables and assumptions for each scenario.  
-5. Export the completed Markdown (with diagrams) as **a single PDF**
