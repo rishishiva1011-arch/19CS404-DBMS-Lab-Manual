@@ -27,13 +27,18 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 ### Entities and Attributes
 
+## Entities and Attributes
+
 | Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+|---|---|---|
+| MEMBERSHIP_TYPE | **membership_type_id (PK)**, type_name, description, duration_months, price | Defines membership plans |
+| MEMBER | **member_id (PK)**, full_name, email, phone, date_of_birth, gender, join_date, **membership_type_id (FK)** | Registered gym member |
+| TRAINER | **trainer_id (PK)**, full_name, email, phone, specialization, hire_date | Gym trainer |
+| PROGRAM | **program_id (PK)**, program_name, description, category, duration_weeks | Fitness program such as Yoga, Zumba, Weight Training |
+| MEMBER_PROGRAM | **member_id (PK, FK)**, **program_id (PK, FK)**, enroll_date | Associative entity for Member–Program M:N relationship |
+| SESSION | **session_id (PK)**, session_date, start_time, end_time, location, notes, **member_id (FK)**, **program_id (FK)**, **trainer_id (FK)** | Personal/group training session |
+| ATTENDANCE | **attendance_id (PK)**, check_in_time, check_out_time, status, **session_id (FK)**, **member_id (FK)**, **trainer_id (FK)** | Records attendance for a session |
+| PAYMENT | **payment_id (PK)**, amount, payment_date, payment_method, transaction_id, **member_id (FK)**, **membership_type_id (FK)**, **session_id (FK)**, notes | Tracks membership and session payments |
 
 ### Relationships and Constraints
 
