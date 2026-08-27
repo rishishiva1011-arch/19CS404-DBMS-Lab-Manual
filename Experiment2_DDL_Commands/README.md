@@ -112,7 +112,8 @@ CREATE TABLE item (item_id TEXT PRIMARY KEY,item_desc TEXT NOT NULL,rate INT NOT
 ```
 
 **Output:**
-<img width="2403" height="660" alt="image" src="https://github.com/user-attachments/assets/546e9aa2-4272-44e7-a10d-8090a4365b85" />
+<img width="2388" height="669" alt="image" src="https://github.com/user-attachments/assets/93b5a693-c6e2-42d5-b635-8122dc3ba8a5" />
+
 
 
 **Question 2**
@@ -129,7 +130,8 @@ JoinDate DATETIME);
 
 **Output:**
 
-<img width="2409" height="759" alt="image" src="https://github.com/user-attachments/assets/52b340c5-15eb-4496-a8f5-d157348d83c6" />
+<img width="2400" height="759" alt="image" src="https://github.com/user-attachments/assets/81128773-e6b5-40be-99b0-f2df4c961e49" />
+
 
 
 **Question 3**
@@ -142,7 +144,8 @@ CREATE TABLE Shipments (ShipmentID INT PRIMARY KEY,ShipmentDate DATE,SupplierID 
 ```
 
 **Output:**
-<img width="2400" height="447" alt="image" src="https://github.com/user-attachments/assets/9d14ae81-7b5f-431f-ad9b-af1f62f59acd" />
+<img width="2391" height="432" alt="image" src="https://github.com/user-attachments/assets/8402f5dd-6f9f-4b9a-ba5f-341cf5a25d3f" />
+
 
 
 **Question 4**
@@ -155,7 +158,8 @@ create table Departments(DepartmentID INTEGER,DepartmentName TEXT);
 
 **Output:**
 
-<img width="2388" height="672" alt="image" src="https://github.com/user-attachments/assets/891b5d83-f67d-473f-80fa-9e78a77b073b" />
+<img width="2409" height="663" alt="image" src="https://github.com/user-attachments/assets/51fb422b-c049-4fa4-962a-77a207e1f3d1" />
+
 
 
 **Question 5**
@@ -168,7 +172,8 @@ create table ProjectAssignments(AssignmentID INTEGER primary key,EmployeeID INTE
 
 **Output:**
 
-<img width="2388" height="534" alt="image" src="https://github.com/user-attachments/assets/2450a7df-9f0b-43f9-b62c-d70557e05e3f" />
+<img width="2391" height="534" alt="image" src="https://github.com/user-attachments/assets/5910a140-a6a1-4044-b419-ee21e6eef871" />
+
 
 
 **Question 6**
@@ -182,7 +187,8 @@ alter table Student_details add column Mobilenumber number;
 
 **Output:**
 
-<img width="2400" height="684" alt="image" src="https://github.com/user-attachments/assets/fee75bb3-cd80-4b6d-8a48-b9289e3e1f36" />
+<img width="2397" height="690" alt="image" src="https://github.com/user-attachments/assets/248661fb-72bf-460c-a252-dcee2288e332" />
+
 
 
 **Question 7**
@@ -196,7 +202,8 @@ alter table Student_details add column Date_of_birth Date;
 
 **Output:**
 
-<img width="2400" height="681" alt="image" src="https://github.com/user-attachments/assets/4212e646-092f-4eb3-b04b-770f15ddab49" />
+<img width="2391" height="663" alt="image" src="https://github.com/user-attachments/assets/a4bb59df-b0cc-4d3f-ad3c-41ab54fdad60" />
+
 
 **Question 8**
 ---
@@ -209,7 +216,8 @@ alter table Student_details add column State TEXT;
 
 **Output:**
 
-<img width="2403" height="684" alt="image" src="https://github.com/user-attachments/assets/2c1a2301-1cd7-484a-a0a5-d20bfe6b6bf2" />
+<img width="2391" height="687" alt="image" src="https://github.com/user-attachments/assets/a127b0df-4aa1-4db9-aa15-e90f754e5a7a" />
+
 
 
 **Question 9**
