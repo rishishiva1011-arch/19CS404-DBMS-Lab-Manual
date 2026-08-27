@@ -1,4 +1,4 @@
-# Experiment 2: DDL Commands
+<img width="2400" height="447" alt="image" src="https://github.com/user-attachments/assets/ced3e526-8580-4100-b549-f2f0ee1a9f11" /># Experiment 2: DDL Commands
 
 ## AIM
 To study and implement DDL commands and different types of constraints.
@@ -104,64 +104,72 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+<img width="2454" height="465" alt="image" src="https://github.com/user-attachments/assets/e49413b9-6968-4127-a548-86441d64d95f" />
+
 
 ```sql
--- Paste your SQL code below for Question 1
+CREATE TABLE item (item_id TEXT PRIMARY KEY,item_desc TEXT NOT NULL,rate INT NOT NULL,icom_id TEXT(4),FOREIGN KEY (icom_id) REFERENCES company(com_id)ON UPDATE CASCADE ON DELETE CASCADE)
 ```
 
 **Output:**
+<img width="2403" height="660" alt="image" src="https://github.com/user-attachments/assets/546e9aa2-4272-44e7-a10d-8090a4365b85" />
 
-![Output1](output.png)
 
 **Question 2**
 ---
--- Paste Question 2 here
+<img width="2481" height="345" alt="image" src="https://github.com/user-attachments/assets/eaadcce8-121a-448b-9e55-7b0197219c55" />
+
 
 ```sql
--- Paste your SQL code below for Question 2
+CREATE TABLE Customers (CustomerID INTEGER,
+Name TEXT,
+Email TEXT,
+JoinDate DATETIME);
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="2409" height="759" alt="image" src="https://github.com/user-attachments/assets/52b340c5-15eb-4496-a8f5-d157348d83c6" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+<img width="2463" height="312" alt="image" src="https://github.com/user-attachments/assets/14763edb-79d6-46c0-a33e-420022804b7c" />
+
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE Shipments (ShipmentID INT PRIMARY KEY,ShipmentDate DATE,SupplierID INT,OrderID INT,FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID),FOREIGN KEY (OrderID) REFERENCES Orders(OrderID));
 ```
 
 **Output:**
+<img width="2400" height="447" alt="image" src="https://github.com/user-attachments/assets/9d14ae81-7b5f-431f-ad9b-af1f62f59acd" />
 
-![Output3](output.png)
 
 **Question 4**
 ---
--- Paste Question 4 here
+<img width="2451" height="219" alt="image" src="https://github.com/user-attachments/assets/9d1428e2-c885-439f-bd3b-8ae0dce72477" />
 
 ```sql
--- Paste your SQL code below for Question 4
+create table Departments(DepartmentID INTEGER,DepartmentName TEXT);
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="2388" height="672" alt="image" src="https://github.com/user-attachments/assets/891b5d83-f67d-473f-80fa-9e78a77b073b" />
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+<img width="2463" height="318" alt="image" src="https://github.com/user-attachments/assets/ebd7910c-06ee-429d-976f-662f640ef61c" />
 
 ```sql
--- Paste your SQL code below for Question 5
+create table ProjectAssignments(AssignmentID INTEGER primary key,EmployeeID INTEGER,ProjectID INTEGER,AssignmentDate DATE NOT NULL,FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID));
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="2388" height="534" alt="image" src="https://github.com/user-attachments/assets/2450a7df-9f0b-43f9-b62c-d70557e05e3f" />
+
 
 **Question 6**
 ---
