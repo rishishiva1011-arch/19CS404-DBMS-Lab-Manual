@@ -173,63 +173,69 @@ create table ProjectAssignments(AssignmentID INTEGER primary key,EmployeeID INTE
 
 **Question 6**
 ---
--- Paste Question 6 here
+<img width="2451" height="516" alt="image" src="https://github.com/user-attachments/assets/f1e6245b-1ae1-4a7c-a811-186f18416df4" />
+
 
 ```sql
--- Paste your SQL code below for Question 6
+alter table Student_details add column Mobilenumber number;
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="2400" height="684" alt="image" src="https://github.com/user-attachments/assets/fee75bb3-cd80-4b6d-8a48-b9289e3e1f36" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+<img width="2421" height="672" alt="image" src="https://github.com/user-attachments/assets/609c970d-8a73-46c7-931c-4caf0a24a9d3" />
+
 
 ```sql
--- Paste your SQL code below for Question 7
+alter table Student_details add column Date_of_birth Date;
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="2400" height="681" alt="image" src="https://github.com/user-attachments/assets/4212e646-092f-4eb3-b04b-770f15ddab49" />
 
 **Question 8**
 ---
--- Paste Question 8 here
+<img width="2442" height="513" alt="image" src="https://github.com/user-attachments/assets/f59db8be-e99b-417b-a765-91efa5a8b12b" />
+
 
 ```sql
--- Paste your SQL code below for Question 8
+alter table Student_details add column State TEXT;
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="2403" height="684" alt="image" src="https://github.com/user-attachments/assets/2c1a2301-1cd7-484a-a0a5-d20bfe6b6bf2" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+<img width="2457" height="486" alt="image" src="https://github.com/user-attachments/assets/21f4ab55-0e01-42a9-bc66-dad771d154e9" />
+
 
 ```sql
--- Paste your SQL code below for Question 9
+CREATE TABLE orders (ord_id TEXT LENGTH check(length(ord_id)=4) NOT NULL,item_id TEXT NOT NULL ,ord_date DATE ,ord_qty INTEGER,cost INTEGER, PRIMARY KEY(item_id , ord_date));
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="2394" height="621" alt="image" src="https://github.com/user-attachments/assets/239558b0-6923-4730-8e45-cc1db07a2bd2" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+<img width="2448" height="381" alt="image" src="https://github.com/user-attachments/assets/c9ef2e44-8bc0-4cb2-a056-a6df5d6fe8c4" />
 
 ```sql
--- Paste your SQL code below for Question 10
+CREATE table Invoices(InvoiceID INT,InvoiceDate DATE,Amount REAL check(Amount>0),DueDate DATE check(DueDate>InvoiceDate),OrderID INT, foreign key (OrderID) REFERENCES Orders(OrderID));
 ```
 
 **Output:**
-
-![Output10](output.png)
+<img width="2406" height="534" alt="image" src="https://github.com/user-attachments/assets/258fedf1-5f05-48af-8907-13e480bc027c" />
 
 
 ## RESULT
