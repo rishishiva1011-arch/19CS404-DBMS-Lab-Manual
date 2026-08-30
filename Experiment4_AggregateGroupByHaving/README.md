@@ -38,7 +38,8 @@ HAVING condition;
 
 **Question 1**
 --
-<img width="810" height="183" alt="image" src="https://github.com/user-attachments/assets/c07e2ed2-47d6-471f-84a3-39e7e4340f56" />
+<img width="819" height="177" alt="image" src="https://github.com/user-attachments/assets/51874785-7dbc-430d-8695-73d876189941" />
+
 
 
 
