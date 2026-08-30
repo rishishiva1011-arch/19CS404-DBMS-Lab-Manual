@@ -52,7 +52,8 @@ select date(AppointmentDateTime) as AppointmentDate,count(*) as TotalAppointment
 
 **Question 2**
 ---
-<img width="813" height="150" alt="image" src="https://github.com/user-attachments/assets/03d1757d-e045-4b15-bed2-bbf3f4863524" />
+<img width="2457" height="459" alt="image" src="https://github.com/user-attachments/assets/e1602132-53c6-4600-9463-3eac85e93884" />
+
 
 
 ```sql
@@ -60,13 +61,12 @@ select PatientID, count(*) as TotalRecords from MedicalRecords group by PatientI
 ```
 
 **Output:**
-
-<img width="795" height="411" alt="image" src="https://github.com/user-attachments/assets/646c1436-97ee-4a36-bcc2-7ee91cdea4b9" />
+<img width="2391" height="1239" alt="image" src="https://github.com/user-attachments/assets/b0ade930-c9fc-4827-b647-0933302b3475" />
 
 
 **Question 3**
 ---
-<img width="816" height="183" alt="image" src="https://github.com/user-attachments/assets/bd2d2cbd-e1d8-46ad-b807-9fe75c41dd4d" />
+<img width="2463" height="546" alt="image" src="https://github.com/user-attachments/assets/567520c1-892a-491b-89e8-280095c53f62" />
 
 
 ```sql
@@ -75,12 +75,13 @@ select strftime('%Y',ValidityPeriod) as ValidityYear, count (*) as TotalPatients
 
 **Output:**
 
-<img width="795" height="240" alt="image" src="https://github.com/user-attachments/assets/3b1f3185-cb0c-45a3-b5d8-985778e7adf2" />
+<img width="2394" height="723" alt="image" src="https://github.com/user-attachments/assets/d3122607-9629-476a-9075-ea5fac663eac" />
+
 
 
 **Question 4**
 ---
-<img width="816" height="177" alt="image" src="https://github.com/user-attachments/assets/1b07afe9-e79e-4ea8-969d-6f482d87c9bd" />
+<img width="2463" height="531" alt="image" src="https://github.com/user-attachments/assets/aaddfff1-5c03-45ea-adc4-e6ce2e6e87ab" />
 
 
 ```sql
@@ -89,12 +90,14 @@ select count(distinct salesman_id ) as COUNT from orders;
 
 **Output:**
 
-<img width="798" height="192" alt="image" src="https://github.com/user-attachments/assets/a60dee46-71d0-4bf1-9969-d4fbef04d48b" />
+<img width="2403" height="573" alt="image" src="https://github.com/user-attachments/assets/a02c690b-5f94-43cf-9944-a57ec5933336" />
+
 
 
 **Question 5**
 ---
-<img width="819" height="177" alt="image" src="https://github.com/user-attachments/assets/805b81d5-2139-42fc-bb23-482697f385d6" />
+<img width="2469" height="531" alt="image" src="https://github.com/user-attachments/assets/10a566c3-8668-4f56-836d-26d69ce92378" />
+
 
 
 ```sql
@@ -103,12 +106,14 @@ select count(*) as COUNT from customer where grade is not null;
 
 **Output:**
 
-<img width="798" height="192" alt="image" src="https://github.com/user-attachments/assets/014151f0-5219-4cc2-bb66-0c8d9f2a960d" />
+<img width="2409" height="576" alt="image" src="https://github.com/user-attachments/assets/f6f28d26-1761-41de-9e66-2ee9158f820b" />
+
 
 
 **Question 6**
 ---
-<img width="819" height="189" alt="image" src="https://github.com/user-attachments/assets/2ecf366e-9cb3-459a-bdb7-d13fb07e2f0a" />
+<img width="2454" height="564" alt="image" src="https://github.com/user-attachments/assets/86eae1e3-752d-4a7c-9f7a-f84e60f6f86f" />
+
 
 
 ```sql
@@ -117,12 +122,14 @@ select sum(inventory) as total from fruits where unit='LB';
 
 **Output:**
 
-<img width="801" height="192" alt="image" src="https://github.com/user-attachments/assets/f9cefd19-82b3-4a4f-ab08-1a5c68077523" />
+<img width="2391" height="585" alt="image" src="https://github.com/user-attachments/assets/f5b960d8-4d4b-4099-bbdf-1ab9c6f95f45" />
+
 
 
 **Question 7**
 ---
-<img width="813" height="189" alt="image" src="https://github.com/user-attachments/assets/8e8f0cc1-c685-439c-81df-141a3a7aec5d" />
+<img width="2460" height="597" alt="image" src="https://github.com/user-attachments/assets/46abd3d6-8d17-405a-8f11-641556b821ab" />
+
 
 
 ```sql
@@ -131,13 +138,13 @@ select name as fruit_name, inventory as lowest_quantity from fruits order by inv
 
 **Output:**
 
-<img width="798" height="192" alt="image" src="https://github.com/user-attachments/assets/9e2bad0f-9116-4a51-b48f-b54e4aeac6d1" />
-
+<img width="2397" height="576" alt="image" src="https://github.com/user-attachments/assets/698d2ad8-5e81-4109-9da0-8eabbcd744b0" />
 
 
 **Question 8**
 ---
-<img width="819" height="162" alt="image" src="https://github.com/user-attachments/assets/26f6608e-1fc3-4095-b290-b80e5b45297a" />
+<img width="2466" height="492" alt="image" src="https://github.com/user-attachments/assets/ebdefa47-47e5-46c0-b59c-17f780db08f2" />
+
 
 
 ```sql
@@ -146,12 +153,14 @@ select (age/5)*5 as age_group, MIN(salary) as 'MIN(salary)' from customer1 group
 
 **Output:**
 
-<img width="798" height="204" alt="image" src="https://github.com/user-attachments/assets/cc728257-94d7-4e3f-8442-80d66e6234f9" />
+<img width="2403" height="624" alt="image" src="https://github.com/user-attachments/assets/4cc31e1e-8c49-414d-829d-3e4b45877529" />
+
 
 
 **Question 9**
 ---
-<img width="816" height="183" alt="image" src="https://github.com/user-attachments/assets/6055bcfb-43fd-4c3f-aac0-f85ded53086e" />
+<img width="2457" height="549" alt="image" src="https://github.com/user-attachments/assets/84a04e20-e970-487a-959e-4ae927d59d95" />
+
 
 
 ```sql
@@ -160,12 +169,14 @@ select age,MIN(income) as 'MIN(income)' from employee group by age having min(in
 
 **Output:**
 
-<img width="795" height="237" alt="image" src="https://github.com/user-attachments/assets/48ffbc5f-2347-4225-833c-aa5f480cd513" />
+<img width="2403" height="720" alt="image" src="https://github.com/user-attachments/assets/0611edd8-f5de-4dd7-90cc-e4c7f8968236" />
+
 
 
 **Question 10**
 ---
-<img width="816" height="186" alt="image" src="https://github.com/user-attachments/assets/e1df2c90-026e-43de-912b-63d4560157fe" />
+<img width="2463" height="558" alt="image" src="https://github.com/user-attachments/assets/9aa58047-68cf-4ab0-b1da-ad7196b567ee" />
+
 
 
 ```sql
@@ -174,7 +185,7 @@ select category_id , avg(price) as 'AVG(Price)' from products group by category_
 
 **Output:**
 
-<img width="795" height="207" alt="image" src="https://github.com/user-attachments/assets/25ec1d6e-ef88-4b45-ab59-d256382e8499" />
+<img width="2388" height="627" alt="image" src="https://github.com/user-attachments/assets/d2d183f4-2639-4669-bc39-41f6b3bbb124" />
 
 
 
