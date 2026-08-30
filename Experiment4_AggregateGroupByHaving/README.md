@@ -38,7 +38,8 @@ HAVING condition;
 
 **Question 1**
 --
-<img width="816" height="180" alt="image" src="https://github.com/user-attachments/assets/e8d05fb9-b053-46b6-989a-63d1006f9315" />
+<img width="810" height="183" alt="image" src="https://github.com/user-attachments/assets/c07e2ed2-47d6-471f-84a3-39e7e4340f56" />
+
 
 
 ```sql
