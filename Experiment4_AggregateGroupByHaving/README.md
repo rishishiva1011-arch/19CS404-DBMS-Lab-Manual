@@ -38,9 +38,7 @@ HAVING condition;
 
 **Question 1**
 --
-<img width="819" height="177" alt="image" src="https://github.com/user-attachments/assets/51874785-7dbc-430d-8695-73d876189941" />
-
-
+<img width="2448" height="543" alt="image" src="https://github.com/user-attachments/assets/c7d8ad04-912a-4774-b004-8221a751abb5" />
 
 
 ```sql
@@ -48,8 +46,8 @@ select date(AppointmentDateTime) as AppointmentDate,count(*) as TotalAppointment
 ```
 
 **Output:**
+<img width="2397" height="1233" alt="image" src="https://github.com/user-attachments/assets/df96e335-19cf-4afe-84eb-e224ce3dd5f7" />
 
-<img width="798" height="408" alt="image" src="https://github.com/user-attachments/assets/d6b6a6d9-3945-4e1c-a728-467d25ba102a" />
 
 
 **Question 2**
