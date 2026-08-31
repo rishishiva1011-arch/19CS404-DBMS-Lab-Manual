@@ -81,7 +81,6 @@ The program should display the employee details or an error message.
 
 ## Program
 ```
--- Step 3: PL/SQL block using a simple cursor with exception handling
 DECLARE
     CURSOR emp_cur IS
         SELECT emp_name, designation FROM employees;
