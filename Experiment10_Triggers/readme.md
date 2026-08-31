@@ -60,6 +60,11 @@ VALUES (5, 'Emma', 'Consultant', 55000, 10);
 ```
 SELECT * FROM employee_log;
 ```
+
+## Output
+
+<img width="2622" height="204" alt="image" src="https://github.com/user-attachments/assets/ee0c834f-6c85-48f9-b50c-c6b6fcc4b9d5" />
+
 ---
 
 ## 2. Write a trigger to prevent deletion of records from a sensitive table.
