@@ -57,7 +57,8 @@ END;
 ## Output
 <br>
 <img width="1485" height="267" alt="image" src="https://github.com/user-attachments/assets/ea242e75-17c7-4a5b-9897-52a708184052" />
-<br>
+
+
 ---
 
 ## 2. Write a PL/SQL program to Calculate Sum of First N Natural Numbers
@@ -89,9 +90,7 @@ END;
 
 ## Output
 
-<br>
 <img width="1491" height="306" alt="image" src="https://github.com/user-attachments/assets/892acaba-0476-4866-87df-0362a5930a0c" />
-<br>
 ---
 
 ## 3. Write a PL/SQL program to generate Fibonacci series
